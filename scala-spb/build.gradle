@@ -1,0 +1,53 @@
+plugins {
+    id 'java'
+    id 'scala'
+    id 'org.springframework.boot' version '2.5.3'
+//    id 'io.spring.dependency-management'
+    id 'application'
+}
+
+group 'com.lcp'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        scala {
+            srcDirs {
+                "src/main/scala"
+                "src/main/java"
+            }
+        }
+        java {
+            srcDirs "src/main/java"
+        }
+    }
+
+
+}
+//test {
+//    scala {
+//        srcDirs { "test/scala" }
+//    }
+//}
+
+dependencies {
+
+    implementation 'org.scala-lang:scala-library:2.13.6'
+    implementation 'com.google.guava:guava:30.1-jre'
+    implementation 'com.alibaba:fastjson:1.2.76'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.3'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
