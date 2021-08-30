@@ -1,4 +1,6 @@
 rootProject.name = 'gradle-jvm-language'
 include 'scala'
 include 'scala-spb'
+include 'groovy'
+include 'kotlin'
 
