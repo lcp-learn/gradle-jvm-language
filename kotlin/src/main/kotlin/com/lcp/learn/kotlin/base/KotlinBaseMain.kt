@@ -34,5 +34,4 @@ fun main(args: Array<String>) {
     user1.address = "zxzxczxc"
     println(user1.toString())
 
-
 }
